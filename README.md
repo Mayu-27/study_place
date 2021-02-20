@@ -28,6 +28,8 @@
 | phone_number       | string  | null: false |
 | opening_hours      | string  | null: false |
 | non_business_day   | string  | null: false |
+| latitude           | decimal | 
+| longitude          | decimal | 
 
 ### Association
 - has_many :reviews
