@@ -173,6 +173,13 @@ function initMap(){
 
   //解説1：マーカーを生成するMarkerクラス
   var marker = new google.maps.Marker(markerOptions);
+
+  infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+        content: '<div class="map"><%= @spot.shop_name %></div>' // 吹き出しに表示する内容
+  });
+    marker.addListener('click', function() { // マーカーをクリックしたとき
+      infoWindow.open(mapArea, marker); // mapみmakerをの吹き出しの表示します
+      });
 }
 
 </script>
