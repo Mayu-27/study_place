@@ -1,0 +1,16 @@
+current directory: /Users/mayuebina/projects/GitHub/study_place/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/mayuebina/.rbenv/versions/2.6.5/bin/ruby -I /Users/mayuebina/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20210227-75085-6t89n2.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/mayuebina/projects/GitHub/study_place/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/mayuebina/projects/GitHub/study_place/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/mayuebina/projects/GitHub/study_place/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210227-75085-1ywkk52/racc
