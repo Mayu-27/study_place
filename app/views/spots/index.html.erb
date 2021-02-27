@@ -138,6 +138,7 @@
   </div>
   <%# /商品一覧 %>
 </div>
+
 <%= link_to('#', class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>出品する</span>
   <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
@@ -154,14 +155,32 @@
 </style>
 
 <script>
+
 function initMap(){
-  let map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: -34.397, lng: 150.644},
-  zoom: 8
-  });
+  var test = {lat: <%= @spot.latitude %>, lng: <%= @spot.longitude %>};
+  var mapArea = document.getElementById('map');
+  var mapOptions = {
+    center: test,
+    zoom: 16,
+  };
+  var map = new google.maps.Map(mapArea, mapOptions);
+    
+  //解説2：変数 markerOptions
+  var markerOptions = {
+    map: map,
+    position: test,
+  };
+
+  //解説1：マーカーを生成するMarkerクラス
+  var marker = new google.maps.Marker(markerOptions);
 }
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key= <%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
 <%#　Google Mapの表示 %>
 
 <%#= render "shared/footer" %>
+
+
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_18_140703) do
+ActiveRecord::Schema.define(version: 2021_02_27_062325) do
 
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "shop_name", null: false
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_02_18_140703) do
     t.string "phone_number", null: false
     t.string "opening_hours", null: false
     t.string "non_business_day", null: false
-    t.decimal "latitude", precision: 9, scale: 6
-    t.decimal "longitude", precision: 9, scale: 6
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
